@@ -2,7 +2,7 @@
   "name": "runtime-cache",
   "version": "1.0.1",
   "description": "A runtime cache class",
-  "main": "index.js",
+  "main": "es5.js",
   "scripts": {
     "test": "echo 'SpringHack'"
   },
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/springhack/RuntimeCache/issues"
   },
-  "homepage": "https://github.com/springhack/RuntimeCache#readme"
+  "homepage": "https://github.com/springhack/RuntimeCache#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
 }
