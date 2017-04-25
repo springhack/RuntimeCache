@@ -1,9 +1,10 @@
 {
   "name": "runtime-cache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A runtime cache class",
   "main": "es5.js",
   "scripts": {
+    "build": "babel es6.js > es5.js",
     "test": "echo 'SpringHack'"
   },
   "author": "SpringHack",
@@ -21,7 +22,13 @@
   "homepage": "https://github.com/springhack/RuntimeCache#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "babel-preset-env": "^1.4.0",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0"
   }
 }
