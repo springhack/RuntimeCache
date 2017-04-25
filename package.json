@@ -1,6 +1,6 @@
 {
   "name": "runtime-cache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A runtime cache class",
   "main": "es5.js",
   "scripts": {

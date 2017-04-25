@@ -102,8 +102,14 @@ class Cache {
   append(key, value = true) {
     const time = (new Date()).getTime();
     if (this.checkQueue[key]) {
-      this.checkQueue[key].time = time;
-      this.checkQueue[key].value = value;
+      this.checkQueue[key].time = -1;
+      this.checkQueue[key].key = `__${(new Date()).toString()}__${this.checkQueue[key].key}__`;
+      this.checkQueue[key] = {
+        key,
+        time,
+        value
+      };
+      this.timeBaseList.pushBack(this.checkQueue[key]);
       this.info(`更新 ${key} 缓存`);
     } else {
       this.checkQueue[key] = {

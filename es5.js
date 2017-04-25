@@ -166,8 +166,14 @@ var Cache = function () {
 
       var time = new Date().getTime();
       if (this.checkQueue[key]) {
-        this.checkQueue[key].time = time;
-        this.checkQueue[key].value = value;
+        this.checkQueue[key].time = -1;
+        this.checkQueue[key].key = '__' + new Date().toString() + '__' + this.checkQueue[key].key + '__';
+        this.checkQueue[key] = {
+          key: key,
+          time: time,
+          value: value
+        };
+        this.timeBaseList.pushBack(this.checkQueue[key]);
         this.info('\u66F4\u65B0 ' + key + ' \u7F13\u5B58');
       } else {
         this.checkQueue[key] = {
